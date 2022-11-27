@@ -1,0 +1,10 @@
+create or replace procedure sp_branch_list(p_branches out sys_refcursor)as
+/*
+Author := Aravind N
+Created on :=25.10.2022
+purpose:=this sp is used to return bank branches from tbl_ttsbank_info 
+*/
+begin
+open p_branches for select ttsbank_id,ttsbank_location from tbl_ttsbank_info;
+end;
+/
